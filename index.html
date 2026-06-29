@@ -49,6 +49,31 @@
         padding: 20px;
       }
 
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 0;
+      }
+
+      .nav a {
+        min-height: 32px;
+        padding: 6px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.8);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      .nav a[aria-current="page"] {
+        background: #e3f2e9;
+        color: var(--green-dark);
+        border-color: rgba(15, 123, 75, 0.28);
+      }
+
       .hero {
         display: grid;
         gap: 22px;
@@ -508,6 +533,11 @@
   </head>
   <body>
     <main class="page">
+      <nav class="nav" aria-label="Conference day pages">
+        <a href="./" aria-current="page">Monday plan</a>
+        <a href="day-two.html">Day Two</a>
+      </nav>
+
       <section class="hero">
         <p class="eyebrow">AI Engineer World's Fair 2026 / Monday only</p>
         <h1>Monday Command Center</h1>
