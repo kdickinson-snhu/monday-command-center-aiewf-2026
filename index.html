@@ -270,6 +270,60 @@
         font-weight: 650;
       }
 
+      .alternatives {
+        margin-top: 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfaf6;
+      }
+
+      .alternatives summary {
+        cursor: pointer;
+        padding: 12px 14px;
+        color: var(--green-dark);
+        font-weight: 850;
+        list-style-position: inside;
+      }
+
+      .alt-list {
+        display: grid;
+        gap: 10px;
+        padding: 0 14px 14px;
+      }
+
+      .alt {
+        display: grid;
+        grid-template-columns: 86px 1fr;
+        gap: 10px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #ffffff;
+        border: 1px solid #e6e5de;
+      }
+
+      .alt b {
+        color: var(--green-dark);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .alt strong {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .alt span {
+        display: block;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .alt p {
+        margin: 7px 0 0;
+        color: #303a33;
+        font-size: 14px;
+      }
+
       .events {
         display: grid;
         gap: 10px;
@@ -347,6 +401,10 @@
         .time {
           font-size: 16px;
         }
+
+        .alt {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -412,6 +470,27 @@
                 Ask: If I am a solo founder trying to get from idea to paid MVP
                 in seven days, what Codex workflow would you recommend?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>The best SDLC is the one you build yourself</strong>
+                      <span>Room 2009 / Track 4</span>
+                      <p>Use this if Codex feels too demo-heavy. It is more about designing your solo shipping system.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>From Vibes to Production 101</strong>
+                      <span>Room 2010 / Track 1</span>
+                      <p>Use this if you already know you are building an AI product and need production evaluation habits.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -434,6 +513,27 @@
                 Ask: Where do solo builders usually lose the most time between
                 prototype and first customer?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>How to Build Quality Gates into Agentic Coding Workflows</strong>
+                      <span>Room 2024 / Track 7</span>
+                      <p>Best backup if you want practical coding-agent guardrails for shipping without breaking things.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>How I learned to stop worrying and love the sandbox</strong>
+                      <span>Room 2003 / Track 3</span>
+                      <p>Good if you want infrastructure intuition for safe agent execution and fast prototypes.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -457,6 +557,27 @@
                 Ask: How do I tell the difference between a neat technical idea
                 and a problem worth charging for?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>Evals in AI: A Deep Dive</strong>
+                      <span>Room 2010 / Track 1</span>
+                      <p>Choose this only if the business idea is likely to be AI-agent-heavy and quality is the main risk.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>Beyond RAG: Build a Relational Context Engine from Scratch</strong>
+                      <span>Room 2024 / Track 7</span>
+                      <p>Useful if you are sniffing around document, support, internal knowledge, or workflow software.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -479,6 +600,27 @@
                 Ask: What is the smallest paid signal I should seek before
                 building more?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>How Reducto parsed the Epstein Files for the Viral JMail Project</strong>
+                      <span>Room 2024 / Track 7</span>
+                      <p>Good if document automation sounds like a commercial wedge: messy files, extraction, review, workflows.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>Turning My Obsidian Vault Into a Local AI Engineer</strong>
+                      <span>Room 2020 / Track 8</span>
+                      <p>Useful if you are drawn toward personal productivity, knowledge work, or solo-builder tooling.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -501,6 +643,27 @@
                 If eating with strangers, ask: What workflow are you shocked
                 still happens manually in your industry?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>Grab fast food, then Burn your flags</strong>
+                      <span>2:20pm / Room 2009 / Track 4</span>
+                      <p>Worth it if you are energized and want agent-friendly CLI/product design ideas from PayPal.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>Hands-on AutoResearch: Cracking OpenAI's Parameter Golf</strong>
+                      <span>2:20pm / Room 2016 / Track 9</span>
+                      <p>Choose this if you still want the original selected slot, but treat it as curiosity, not traction.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -524,6 +687,27 @@
                 Ask: If you had one engineer for six months and needed to reach
                 10k MRR, what painful workflow would you build around?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>Burn your flags: How PayPal designs interactive CLI tools for agents</strong>
+                      <span>Room 2009 / Track 4</span>
+                      <p>Stay here if the session is producing concrete product-design ideas for developer tools.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>Context Engineering in 2026: Compaction, Memory & Cost</strong>
+                      <span>Room 2014 / Track 6</span>
+                      <p>Good if your likely product involves long-running assistants, memory, or cost-sensitive workflows.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -548,6 +732,27 @@
                 Ask: Which agent workflows are people actually paying for rather
                 than just demoing?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>Lifestyles of the AI-Native: Voice-coding, agent skills, hooks and scheduled tasks</strong>
+                      <span>Room 2024 / Track 7</span>
+                      <p>Choose this if you want a practical sense of how builders are changing their daily workflow.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>The Autonomous Computer: Full-stack Infrastructure for Computer Use Agents</strong>
+                      <span>Room 2010 / Track 1</span>
+                      <p>Good if computer-use agents feel commercially relevant for non-AI industries with awkward web tools.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -571,6 +776,27 @@
                 Ask: What makes a conference conversation actually turn into
                 collaboration?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>Harness Engineering: State of the Art in Agent Harnesses</strong>
+                      <span>5:30pm / offsite side event</span>
+                      <p>Pick this if you want a technical crowd that is likely discussing real agent deployment problems.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>Retrieval for Agents: Building Retrieval Infrastructure for the New and Powerful User</strong>
+                      <span>5:00-9:00pm / Hornet.dev</span>
+                      <p>Use this if retrieval, search, or knowledge workflows keep showing up in your customer conversations.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
 
@@ -594,6 +820,27 @@
                 Ask: What is a painful customer workflow you would pay to make
                 disappear this quarter?
               </p>
+              <details class="alternatives">
+                <summary>Other good options</summary>
+                <div class="alt-list">
+                  <div class="alt">
+                    <b>Option B</b>
+                    <div>
+                      <strong>Model Independence Day</strong>
+                      <span>6:00-10:00pm / Factory Events</span>
+                      <p>Good backup if you want a builder-heavy room and broader conversations about shipping with model choice.</p>
+                    </div>
+                  </div>
+                  <div class="alt">
+                    <b>Option C</b>
+                    <div>
+                      <strong>PlanetScale x Low Level: Security in the AI era</strong>
+                      <span>7:00-10:00pm / 108 Natoma St</span>
+                      <p>Choose this if security, infra, and serious engineering buyers seem more promising than founder mixers.</p>
+                    </div>
+                  </div>
+                </div>
+              </details>
             </div>
           </article>
         </div>
