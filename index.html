@@ -399,7 +399,7 @@
 
       .decision-card {
         display: grid;
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 152px 1fr;
         gap: 16px;
         padding: 16px;
         border: 1px solid var(--line);
@@ -452,6 +452,36 @@
         margin: 0;
         color: #303a33;
         font-size: 14px;
+      }
+
+      .capacity-status {
+        margin-top: 14px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f8faf7;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .capacity-status b {
+        color: var(--green-dark);
+        text-transform: uppercase;
+      }
+
+      .capacity-status.full {
+        border-color: #e7b5a3;
+        background: #fff5f1;
+      }
+
+      .capacity-status.full b {
+        color: #9a3f26;
+      }
+
+      .capacity-status.limited {
+        border-color: #d7c889;
+        background: #fffbe7;
       }
 
       .source-row {
@@ -898,7 +928,8 @@
               <p class="desc">
                 Good transition from technical sessions into the social part of
                 the day. It fits the real objective: better conversations and
-                better problem discovery.
+                better problem discovery, but treat it as optional if you can
+                get to the Harness Engineering offsite by 5:30.
               </p>
               <p class="ask">
                 Ask: What makes a conference conversation actually turn into
@@ -919,8 +950,8 @@
                     <b>Option C</b>
                     <div>
                       <strong>Retrieval for Agents: Building Retrieval Infrastructure for the New and Powerful User</strong>
-                      <span>5:00-9:00pm / Hornet.dev</span>
-                      <p>Use this if retrieval, search, or knowledge workflows keep showing up in your customer conversations.</p>
+                      <span>5:00-9:00pm / Hornet.dev / full, waitlist only</span>
+                      <p>Use this only if you already have approval or can get off the waitlist.</p>
                     </div>
                   </div>
                 </div>
@@ -940,9 +971,9 @@
                 <span class="tag skip">Do not bounce everywhere</span>
               </div>
               <p class="desc">
-                Prioritize rooms with founders, product-minded builders, and
-                people discussing real deployments. Pick one main event and one
-                fallback rather than trying to attend everything.
+                Default path: Harness Engineering at 5:30. If Factory approves
+                you, move to Model Independence Day; otherwise use PlanetScale
+                as the later exact-address backup.
               </p>
               <p class="ask">
                 Ask: What is a painful customer workflow you would pay to make
@@ -955,7 +986,7 @@
                     <b>Option B</b>
                     <div>
                       <strong>Model Independence Day</strong>
-                      <span>6:00-10:00pm / Factory Events</span>
+                      <span>6:00-10:00pm / Factory Events / approval required</span>
                       <p>Good backup if you want a builder-heavy room and broader conversations about shipping with model choice.</p>
                     </div>
                   </div>
@@ -963,7 +994,7 @@
                     <b>Option C</b>
                     <div>
                       <strong>PlanetScale x Low Level: Security in the AI era</strong>
-                      <span>7:00-10:00pm / 108 Natoma St</span>
+                      <span>7:00-9:30pm / 108 Natoma St / approval required</span>
                       <p>Choose this if security, infra, and serious engineering buyers seem more promising than founder mixers.</p>
                     </div>
                   </div>
@@ -976,12 +1007,146 @@
 
       <section>
         <div class="section-heading">
-          <h2>Tonight decision board</h2>
-          <p>Sorted by start time. The best fit for your goal is the event most likely to create founder, customer, or paid-workflow conversations.</p>
+          <h2>Tonight decision board: Ranked after-5pm plan</h2>
+          <p>Ranked for practical access first, then quality of conversations. Full/waitlist events stay listed, but they are fallback-only unless you already have approval.</p>
         </div>
         <ol class="decision-board">
           <li class="decision-card">
-            <div class="decision-time">5:00-6:00pm<span>Already running / Moscone West</span></div>
+            <div class="decision-time">#1<br>5:30-8:30pm<span>AWS Builder Loft<br>525 Market St, San Francisco, CA 94105</span></div>
+            <div>
+              <h3>Harness Engineering: State of the Art in Agent Harnesses</h3>
+              <div class="meta-row">
+                <span class="tag must">Best open bet</span>
+                <span class="tag">Agentic Engineering</span>
+              </div>
+              <p class="desc">
+                This is the highest-confidence actionable pick because it is open, specific, and close to the core agent-infrastructure conversation. It should attract people who are building evals, tools, runtimes, memory, and guardrails around production agents.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Agentic Engineering is organizing around serious agent systems rather than surface-level demos.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>High for technical collaborators and customer-discovery around agent reliability, observability, and devtools.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want an on-time, exact-address plan with the fewest access surprises.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/rtd0f6ka" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.agentic.engineering/" target="_blank" rel="noopener noreferrer">Agentic Engineering</a>
+              </div>
+              <div class="capacity-status"><b>Capacity checked</b> OPEN: no approval required. Luma shows registration open and not sold out.</div>
+            </div>
+          </li>
+
+          <li class="decision-card">
+            <div class="decision-time">#2<br>6:00-10:00pm<span>The Melody / Russian Hill<br>exact address shown to approved guests</span></div>
+            <div>
+              <h3>Model Independence Day</h3>
+              <div class="meta-row">
+                <span class="tag strong">Builder-heavy</span>
+                <span class="tag">Factory Events</span>
+              </div>
+              <p class="desc">
+                Factory builds AI software engineering agents and has been highly visible in the software-factory conversation. The agenda is model-cost, model-choice, and LLM-agnostic stack heavy, which is useful if you want builder opinions fast.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Factory is an AI devtools company around autonomous software work. Expect builders, devtools people, and infra founders.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>High for solo-builder workflow and potential collaborators. Medium for non-AI vertical customer discovery.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want a larger, energetic room and can tolerate approval-gated access.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/factoryai-ljuc" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.factory.ai/" target="_blank" rel="noopener noreferrer">Factory</a>
+              </div>
+              <div class="capacity-status"><b>Capacity checked</b> OPEN: approval required; 292 spots shown. Exact street address is guests-only.</div>
+            </div>
+          </li>
+
+          <li class="decision-card">
+            <div class="decision-time">#3<br>7:00-9:30pm<span>PlanetScale<br>108 Natoma St, San Francisco, CA 94105</span></div>
+            <div>
+              <h3>PlanetScale x Low Level: Security in the AI era</h3>
+              <div class="meta-row">
+                <span class="tag strong">Serious infra buyers</span>
+                <span class="tag">PlanetScale + Low Level</span>
+              </div>
+              <p class="desc">
+                PlanetScale brings database operators and Low Level brings a security-research audience. This is a strong choice if you want fewer hype conversations and more concrete engineering risk, supply-chain, and AI-generated-code pain.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Database and security operators. More infrastructure than founder mixer.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>High if you might build security, infra, compliance, or developer tooling.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want to ask technical buyers what risk or manual review process they would pay to remove.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/ow1f82nb" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://planetscale.com/" target="_blank" rel="noopener noreferrer">PlanetScale</a>
+                <a href="https://www.youtube.com/@LowLevelTV" target="_blank" rel="noopener noreferrer">Low Level</a>
+              </div>
+              <div class="capacity-status"><b>Capacity checked</b> OPEN: approval required. Luma shows registration open and not sold out.</div>
+            </div>
+          </li>
+
+          <li class="decision-card">
+            <div class="decision-time">#4<br>7:00-9:00pm<span>Yerba Buena<br>exact address shown to approved guests</span></div>
+            <div>
+              <h3>Cafe Compute: Multi-Modal Edition</h3>
+              <div class="meta-row">
+                <span class="tag optional">Frontier crowd</span>
+                <span class="tag">Cerebras + Google DeepMind</span>
+              </div>
+              <p class="desc">
+                Cerebras and Google DeepMind make this the strongest technical-research room. It is likely more compute, multimodal, and frontier-model oriented than customer-discovery oriented, but the open capacity makes it a good backup.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Compute and frontier-model crowd. Expect technical depth and research-adjacent conversations.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>Medium unless you want multimodal, media, robotics, or infra ideas.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want to meet deep technical people more than potential customers.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/cafecomputesf" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.cerebras.ai/" target="_blank" rel="noopener noreferrer">Cerebras</a>
+                <a href="https://deepmind.google/" target="_blank" rel="noopener noreferrer">Google DeepMind</a>
+              </div>
+              <div class="capacity-status"><b>Capacity checked</b> OPEN: approval required; 378 spots shown. Exact street address is guests-only.</div>
+            </div>
+          </li>
+
+          <li class="decision-card">
+            <div class="decision-time">#5<br>5:00pm<span>Moscone West<br>800 Howard St, San Francisco, CA 94103</span></div>
             <div>
               <h3>Human Connection in the Age of AI</h3>
               <div class="meta-row">
@@ -1006,14 +1171,16 @@
                 </div>
               </div>
               <div class="source-row">
+                <a href="https://tally.so/r/XxN9XV" target="_blank" rel="noopener noreferrer">Access form</a>
                 <a href="https://leadersintech.org/team/" target="_blank" rel="noopener noreferrer">Carole Robin context</a>
                 <a href="https://www.ai.engineer/worldsfair/schedule" target="_blank" rel="noopener noreferrer">Schedule source</a>
               </div>
+              <div class="capacity-status limited"><b>Capacity checked</b> COMP PASSES: request access. The form says public conference passes are sold out, with limited complimentary Expo passes available by request.</div>
             </div>
           </li>
 
           <li class="decision-card">
-            <div class="decision-time">5:00-9:00pm<span>Active after 5:30 / San Francisco</span></div>
+            <div class="decision-time">#6<br>5:00-9:00pm<span>Mission District<br>exact address shown to approved guests</span></div>
             <div>
               <h3>Retrieval for Agents: Building Retrieval Infrastructure for the New and Powerful User</h3>
               <div class="meta-row">
@@ -1021,71 +1188,40 @@
                 <span class="tag">Hornet.dev</span>
               </div>
               <p class="desc">
-                This is a focused retrieval/search event. Hornet positions itself around agentic search and retrieval infrastructure, which overlaps with real business pain in support, internal knowledge, legal, healthcare, construction docs, and messy enterprise workflows.
+                This is still one of the best topic fits: retrieval problems map to support, legal, healthcare, internal knowledge, and messy enterprise workflows. The catch is capacity, so it is only a top move if you already have access.
               </p>
               <div class="decision-grid">
                 <div class="decision-note">
                   <b>Coordinator context</b>
-                  <p>Hornet.dev is in the retrieval/search layer for agents. Expect people who care about making data usable, not just model demos.</p>
+                  <p>Hornet.dev is in the retrieval/search layer for agents. Expect people who care about making data usable.</p>
                 </div>
                 <div class="decision-note">
                   <b>Best fit for your goal</b>
-                  <p>High if you want monetizable workflow ideas. Retrieval problems often map to concrete budgets.</p>
+                  <p>Very high if accepted. Low as a cold plan because the event is full.</p>
                 </div>
                 <div class="decision-note">
                   <b>Choose this if</b>
-                  <p>You keep hearing document, search, support, or knowledge-base pain during the day.</p>
+                  <p>You are already approved or can get off waitlist before 5:30pm.</p>
                 </div>
               </div>
               <div class="source-row">
                 <a href="https://luma.com/ypnd3grq" target="_blank" rel="noopener noreferrer">Event page</a>
                 <a href="https://www.hornet.dev/" target="_blank" rel="noopener noreferrer">Hornet.dev</a>
               </div>
+              <div class="capacity-status full"><b>Capacity checked</b> FULL: join waitlist. Luma shows registration availability as waitlist, sold out true, and 0 spots remaining.</div>
             </div>
           </li>
 
           <li class="decision-card">
-            <div class="decision-time">5:30pm<span>San Francisco</span></div>
-            <div>
-              <h3>Harness Engineering: State of the Art in Agent Harnesses</h3>
-              <div class="meta-row">
-                <span class="tag strong">Technical buyers</span>
-                <span class="tag">Agentic Engineering</span>
-              </div>
-              <p class="desc">
-                This is likely the most technical reliability-focused room. Agent harnesses are about the runtime, evals, tools, memory, and guardrails around agents: useful if you might build infrastructure, devtools, or internal agent systems.
-              </p>
-              <div class="decision-grid">
-                <div class="decision-note">
-                  <b>Coordinator context</b>
-                  <p>Agentic Engineering is organizing around serious agent systems rather than surface-level demos.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Best fit for your goal</b>
-                  <p>Medium-high. Great for technical collaborators, weaker for discovering non-AI vertical pain.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Choose this if</b>
-                  <p>You want to meet people building agent infrastructure and ask what customers actually buy.</p>
-                </div>
-              </div>
-              <div class="source-row">
-                <a href="https://luma.com/rtd0f6ka" target="_blank" rel="noopener noreferrer">Event page</a>
-                <a href="https://www.agentic.engineering/" target="_blank" rel="noopener noreferrer">Agentic Engineering</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="decision-card">
-            <div class="decision-time">5:30-8:00pm<span>Marlowe, San Francisco</span></div>
+            <div class="decision-time">#7<br>5:30-8:00pm<span>Marlowe<br>500 Brannan St, San Francisco, CA 94107</span></div>
             <div>
               <h3>{SoMa} AI Conspiracy Dinner by Superlinked</h3>
               <div class="meta-row">
-                <span class="tag must">High-signal dinner</span>
+                <span class="tag must">Best if already in</span>
                 <span class="tag">Superlinked</span>
               </div>
               <p class="desc">
-                Superlinked works in vector search and retrieval infrastructure, so the room should skew toward people thinking about data, relevance, and agent memory. A dinner is also better than a loud mixer if you want meaningful founder conversations.
+                In pure conversation quality, this would rank near the top: dinner format, search/retrieval infrastructure, and a smaller room. Practically, it is full, so only treat it as a real option if your RSVP is already approved.
               </p>
               <div class="decision-grid">
                 <div class="decision-note">
@@ -1094,95 +1230,31 @@
                 </div>
                 <div class="decision-note">
                   <b>Best fit for your goal</b>
-                  <p>Very high if you can get in. Dinner format plus infrastructure crowd is a good mix for thoughtful problem discovery.</p>
+                  <p>Very high if accepted. Not actionable as a cold plan because it is full.</p>
                 </div>
                 <div class="decision-note">
                   <b>Choose this if</b>
-                  <p>You want fewer conversations, deeper context, and a better chance of follow-up.</p>
+                  <p>You already have a spot and want fewer conversations with more depth.</p>
                 </div>
               </div>
               <div class="source-row">
                 <a href="https://luma.com/mjzx355q" target="_blank" rel="noopener noreferrer">Event page</a>
                 <a href="https://superlinked.com/" target="_blank" rel="noopener noreferrer">Superlinked</a>
               </div>
+              <div class="capacity-status full"><b>Capacity checked</b> FULL: join waitlist. Luma shows sold out true and 0 spots remaining.</div>
             </div>
           </li>
 
           <li class="decision-card">
-            <div class="decision-time">6:00-10:00pm<span>San Francisco</span></div>
+            <div class="decision-time">#8<br>7:00-10:00pm<span>Ferry Building<br>1 Ferry Building, San Francisco, CA 94105</span></div>
             <div>
-              <h3>Model Independence Day</h3>
+              <h3>Qodo VIP Engineer Reception & Drone Show</h3>
               <div class="meta-row">
-                <span class="tag strong">Builder-heavy</span>
-                <span class="tag">Factory Events</span>
-              </div>
-              <p class="desc">
-                Factory builds AI software engineering agents and has been highly visible in the software-factory conversation. This event likely attracts people thinking about coding agents, developer workflows, and model choice.
-              </p>
-              <div class="decision-grid">
-                <div class="decision-note">
-                  <b>Coordinator context</b>
-                  <p>Factory is an AI devtools company around autonomous software work. Expect builders and devtools people.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Best fit for your goal</b>
-                  <p>High for solo-builder workflow and potential collaborators. Medium for non-AI vertical customer discovery.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Choose this if</b>
-                  <p>You want a larger, energetic room where you can rapidly sample many builder opinions.</p>
-                </div>
-              </div>
-              <div class="source-row">
-                <a href="https://luma.com/factoryai-ljuc" target="_blank" rel="noopener noreferrer">Event page</a>
-                <a href="https://www.factory.ai/" target="_blank" rel="noopener noreferrer">Factory</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="decision-card">
-            <div class="decision-time">7:00-9:00pm<span>San Francisco</span></div>
-            <div>
-              <h3>Cafe Compute: Multi-Modal Edition</h3>
-              <div class="meta-row">
-                <span class="tag optional">Frontier crowd</span>
-                <span class="tag">Cerebras + Google DeepMind</span>
-              </div>
-              <p class="desc">
-                Cerebras is known for wafer-scale AI compute and Google DeepMind is frontier AI research. This is likely more research/infrastructure-heavy than customer-discovery-heavy, but it may be excellent if multimodal products are pulling you.
-              </p>
-              <div class="decision-grid">
-                <div class="decision-note">
-                  <b>Coordinator context</b>
-                  <p>Compute and frontier-model crowd. Expect technical depth and research-adjacent conversations.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Best fit for your goal</b>
-                  <p>Medium-low unless you want multimodal, media, robotics, or infra ideas.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Choose this if</b>
-                  <p>You want to meet deep technical people more than potential customers.</p>
-                </div>
-              </div>
-              <div class="source-row">
-                <a href="https://luma.com/cafecomputesf" target="_blank" rel="noopener noreferrer">Event page</a>
-                <a href="https://www.cerebras.ai/" target="_blank" rel="noopener noreferrer">Cerebras</a>
-                <a href="https://deepmind.google/" target="_blank" rel="noopener noreferrer">Google DeepMind</a>
-              </div>
-            </div>
-          </li>
-
-          <li class="decision-card">
-            <div class="decision-time">7:00-9:30pm<span>Grand Hall, 1 Ferry Building</span></div>
-            <div>
-              <h3>Qodo: AIE Opening Night VIP Event</h3>
-              <div class="meta-row">
-                <span class="tag must">Best broad pick</span>
+                <span class="tag must">High-value if accepted</span>
                 <span class="tag">Qodo</span>
               </div>
               <p class="desc">
-                Qodo is focused on AI code quality and verification, and recently raised a large round around that bet. The event framing and venue suggest a polished, high-density room with engineering leaders, founders, and people who care about reliable AI coding.
+                Qodo is focused on AI code quality and verification, and the venue suggests a polished, high-density room. It would be a strong broad networking choice if you are already approved, but the event page now shows waitlist status.
               </p>
               <div class="decision-grid">
                 <div class="decision-note">
@@ -1191,11 +1263,11 @@
                 </div>
                 <div class="decision-note">
                   <b>Best fit for your goal</b>
-                  <p>Very high. Good blend of founder energy, budget-adjacent engineering pain, and broad networking density.</p>
+                  <p>Very high if accepted. Low as a cold plan because it is full/waitlist.</p>
                 </div>
                 <div class="decision-note">
                   <b>Choose this if</b>
-                  <p>You can get in and want the most balanced bet for people, business context, and useful follow-ups.</p>
+                  <p>You are already approved or can get a direct invite before 7pm.</p>
                 </div>
               </div>
               <div class="source-row">
@@ -1203,39 +1275,7 @@
                 <a href="https://www.qodo.ai/" target="_blank" rel="noopener noreferrer">Qodo</a>
                 <a href="https://techcrunch.com/2026/03/30/qodo-bets-on-code-verification-as-ai-coding-scales-raises-70m/" target="_blank" rel="noopener noreferrer">Funding context</a>
               </div>
-            </div>
-          </li>
-
-          <li class="decision-card">
-            <div class="decision-time">7:00-10:00pm<span>PlanetScale, 108 Natoma St</span></div>
-            <div>
-              <h3>PlanetScale x Low Level: Security in the AI era</h3>
-              <div class="meta-row">
-                <span class="tag strong">Serious infra buyers</span>
-                <span class="tag">PlanetScale + Low Level</span>
-              </div>
-              <p class="desc">
-                PlanetScale is a database platform rooted in Vitess/MySQL scale, and Low Level brings a security-research audience. This is the best option if you want fewer hype conversations and more serious engineering/security pain.
-              </p>
-              <div class="decision-grid">
-                <div class="decision-note">
-                  <b>Coordinator context</b>
-                  <p>Database and security operators. More infrastructure than founder mixer.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Best fit for your goal</b>
-                  <p>High if you might build security, infra, compliance, or developer tooling. Lower if you want broad startup ideation.</p>
-                </div>
-                <div class="decision-note">
-                  <b>Choose this if</b>
-                  <p>You want to ask technical buyers what risk or manual review process they would pay to remove.</p>
-                </div>
-              </div>
-              <div class="source-row">
-                <a href="https://luma.com/ow1f82nb" target="_blank" rel="noopener noreferrer">Event page</a>
-                <a href="https://planetscale.com/" target="_blank" rel="noopener noreferrer">PlanetScale</a>
-                <a href="https://www.youtube.com/@LowLevelTV" target="_blank" rel="noopener noreferrer">Low Level</a>
-              </div>
+              <div class="capacity-status full"><b>Capacity checked</b> FULL: join waitlist. Luma shows registration availability as waitlist, sold out true, and 0 spots remaining.</div>
             </div>
           </li>
         </ol>
