@@ -364,6 +364,96 @@
         font-size: 14px;
       }
 
+      .decision-board {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .decision-card {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 16px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .decision-time {
+        font-weight: 900;
+        color: var(--green-dark);
+      }
+
+      .decision-time span {
+        display: block;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .decision-card h3 {
+        margin: 0 0 8px;
+        font-size: clamp(22px, 3vw, 32px);
+        line-height: 1.1;
+      }
+
+      .decision-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .decision-note {
+        min-height: 100px;
+        padding: 12px;
+        border-radius: 8px;
+        background: #f7f6ef;
+      }
+
+      .decision-note b {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--green-dark);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .decision-note p {
+        margin: 0;
+        color: #303a33;
+        font-size: 14px;
+      }
+
+      .source-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .source-row a {
+        display: inline-flex;
+        min-height: 26px;
+        align-items: center;
+        padding: 3px 9px;
+        border: 1px solid #d7d3c4;
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      .source-row a:hover {
+        color: var(--green-dark);
+        border-color: var(--green);
+      }
+
       .footer {
         padding: 34px 0 20px;
         color: var(--muted);
@@ -403,6 +493,14 @@
         }
 
         .alt {
+          grid-template-columns: 1fr;
+        }
+
+        .decision-card {
+          grid-template-columns: 1fr;
+        }
+
+        .decision-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -848,43 +946,266 @@
 
       <section>
         <div class="section-heading">
-          <h2>Evening ranking</h2>
-          <p>Choose based on people density and likelihood of real founder/customer conversations.</p>
+          <h2>Tonight decision board</h2>
+          <p>Sorted by start time. The best fit for your goal is the event most likely to create founder, customer, or paid-workflow conversations.</p>
         </div>
-        <ol class="events">
-          <li class="event">
-            <span class="rank">1</span>
+        <ol class="decision-board">
+          <li class="decision-card">
+            <div class="decision-time">5:00-6:00pm<span>Already running / Moscone West</span></div>
             <div>
-              <b>Qodo: AIE Opening Night VIP Event</b>
-              <span>7:00-9:30pm / Grand Hall, 1 Ferry Building</span>
+              <h3>Human Connection in the Age of AI</h3>
+              <div class="meta-row">
+                <span class="tag optional">Warm-up option</span>
+                <span class="tag">Joyce Zhang + Carole Robin</span>
+              </div>
+              <p class="desc">
+                This is the soft-skills bridge into the evening. Carole Robin is known for teaching interpersonal dynamics at Stanford GSB and co-authoring <em>Connect</em>, so the likely value is better conversations rather than startup lead flow.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Leadership and relationship-building crowd. Useful if you want to reset your social energy before the offsites.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>Medium. It helps conversation quality, but it is not the densest founder/customer room.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You are still at Moscone, tired, and want a low-friction runway into the night.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://leadersintech.org/team/" target="_blank" rel="noopener noreferrer">Carole Robin context</a>
+                <a href="https://www.ai.engineer/worldsfair/schedule" target="_blank" rel="noopener noreferrer">Schedule source</a>
+              </div>
             </div>
           </li>
-          <li class="event">
-            <span class="rank">2</span>
+
+          <li class="decision-card">
+            <div class="decision-time">5:00-9:00pm<span>Active after 5:30 / San Francisco</span></div>
             <div>
-              <b>{SoMa} AI Conspiracy Dinner by Superlinked</b>
-              <span>5:30-8:00pm / Marlowe, San Francisco</span>
+              <h3>Retrieval for Agents: Building Retrieval Infrastructure for the New and Powerful User</h3>
+              <div class="meta-row">
+                <span class="tag strong">Strong business signal</span>
+                <span class="tag">Hornet.dev</span>
+              </div>
+              <p class="desc">
+                This is a focused retrieval/search event. Hornet positions itself around agentic search and retrieval infrastructure, which overlaps with real business pain in support, internal knowledge, legal, healthcare, construction docs, and messy enterprise workflows.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Hornet.dev is in the retrieval/search layer for agents. Expect people who care about making data usable, not just model demos.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>High if you want monetizable workflow ideas. Retrieval problems often map to concrete budgets.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You keep hearing document, search, support, or knowledge-base pain during the day.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/ypnd3grq" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.hornet.dev/" target="_blank" rel="noopener noreferrer">Hornet.dev</a>
+              </div>
             </div>
           </li>
-          <li class="event">
-            <span class="rank">3</span>
+
+          <li class="decision-card">
+            <div class="decision-time">5:30pm<span>San Francisco</span></div>
             <div>
-              <b>Cafe Compute: Multi-Modal Edition</b>
-              <span>7:00-9:00pm / Cerebras and Google DeepMind</span>
+              <h3>Harness Engineering: State of the Art in Agent Harnesses</h3>
+              <div class="meta-row">
+                <span class="tag strong">Technical buyers</span>
+                <span class="tag">Agentic Engineering</span>
+              </div>
+              <p class="desc">
+                This is likely the most technical reliability-focused room. Agent harnesses are about the runtime, evals, tools, memory, and guardrails around agents: useful if you might build infrastructure, devtools, or internal agent systems.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Agentic Engineering is organizing around serious agent systems rather than surface-level demos.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>Medium-high. Great for technical collaborators, weaker for discovering non-AI vertical pain.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want to meet people building agent infrastructure and ask what customers actually buy.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/rtd0f6ka" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.agentic.engineering/" target="_blank" rel="noopener noreferrer">Agentic Engineering</a>
+              </div>
             </div>
           </li>
-          <li class="event">
-            <span class="rank">4</span>
+
+          <li class="decision-card">
+            <div class="decision-time">5:30-8:00pm<span>Marlowe, San Francisco</span></div>
             <div>
-              <b>PlanetScale x Low Level: Security in the AI era</b>
-              <span>7:00-10:00pm / PlanetScale, 108 Natoma St</span>
+              <h3>{SoMa} AI Conspiracy Dinner by Superlinked</h3>
+              <div class="meta-row">
+                <span class="tag must">High-signal dinner</span>
+                <span class="tag">Superlinked</span>
+              </div>
+              <p class="desc">
+                Superlinked works in vector search and retrieval infrastructure, so the room should skew toward people thinking about data, relevance, and agent memory. A dinner is also better than a loud mixer if you want meaningful founder conversations.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Superlinked is relevant to search, recommendations, and retrieval-heavy products where data shape matters.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>Very high if you can get in. Dinner format plus infrastructure crowd is a good mix for thoughtful problem discovery.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want fewer conversations, deeper context, and a better chance of follow-up.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/mjzx355q" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://superlinked.com/" target="_blank" rel="noopener noreferrer">Superlinked</a>
+              </div>
             </div>
           </li>
-          <li class="event">
-            <span class="rank">5</span>
+
+          <li class="decision-card">
+            <div class="decision-time">6:00-10:00pm<span>San Francisco</span></div>
             <div>
-              <b>Model Independence Day</b>
-              <span>6:00-10:00pm / Factory Events</span>
+              <h3>Model Independence Day</h3>
+              <div class="meta-row">
+                <span class="tag strong">Builder-heavy</span>
+                <span class="tag">Factory Events</span>
+              </div>
+              <p class="desc">
+                Factory builds AI software engineering agents and has been highly visible in the software-factory conversation. This event likely attracts people thinking about coding agents, developer workflows, and model choice.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Factory is an AI devtools company around autonomous software work. Expect builders and devtools people.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>High for solo-builder workflow and potential collaborators. Medium for non-AI vertical customer discovery.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want a larger, energetic room where you can rapidly sample many builder opinions.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/factoryai-ljuc" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.factory.ai/" target="_blank" rel="noopener noreferrer">Factory</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="decision-card">
+            <div class="decision-time">7:00-9:00pm<span>San Francisco</span></div>
+            <div>
+              <h3>Cafe Compute: Multi-Modal Edition</h3>
+              <div class="meta-row">
+                <span class="tag optional">Frontier crowd</span>
+                <span class="tag">Cerebras + Google DeepMind</span>
+              </div>
+              <p class="desc">
+                Cerebras is known for wafer-scale AI compute and Google DeepMind is frontier AI research. This is likely more research/infrastructure-heavy than customer-discovery-heavy, but it may be excellent if multimodal products are pulling you.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Compute and frontier-model crowd. Expect technical depth and research-adjacent conversations.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>Medium-low unless you want multimodal, media, robotics, or infra ideas.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want to meet deep technical people more than potential customers.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/cafecomputesf" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.cerebras.ai/" target="_blank" rel="noopener noreferrer">Cerebras</a>
+                <a href="https://deepmind.google/" target="_blank" rel="noopener noreferrer">Google DeepMind</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="decision-card">
+            <div class="decision-time">7:00-9:30pm<span>Grand Hall, 1 Ferry Building</span></div>
+            <div>
+              <h3>Qodo: AIE Opening Night VIP Event</h3>
+              <div class="meta-row">
+                <span class="tag must">Best broad pick</span>
+                <span class="tag">Qodo</span>
+              </div>
+              <p class="desc">
+                Qodo is focused on AI code quality and verification, and recently raised a large round around that bet. The event framing and venue suggest a polished, high-density room with engineering leaders, founders, and people who care about reliable AI coding.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Qodo's wedge is verification and code quality as AI coding scales. That is close to real business pain.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>Very high. Good blend of founder energy, budget-adjacent engineering pain, and broad networking density.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You can get in and want the most balanced bet for people, business context, and useful follow-ups.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/kyrrt7oh" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://www.qodo.ai/" target="_blank" rel="noopener noreferrer">Qodo</a>
+                <a href="https://techcrunch.com/2026/03/30/qodo-bets-on-code-verification-as-ai-coding-scales-raises-70m/" target="_blank" rel="noopener noreferrer">Funding context</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="decision-card">
+            <div class="decision-time">7:00-10:00pm<span>PlanetScale, 108 Natoma St</span></div>
+            <div>
+              <h3>PlanetScale x Low Level: Security in the AI era</h3>
+              <div class="meta-row">
+                <span class="tag strong">Serious infra buyers</span>
+                <span class="tag">PlanetScale + Low Level</span>
+              </div>
+              <p class="desc">
+                PlanetScale is a database platform rooted in Vitess/MySQL scale, and Low Level brings a security-research audience. This is the best option if you want fewer hype conversations and more serious engineering/security pain.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-note">
+                  <b>Coordinator context</b>
+                  <p>Database and security operators. More infrastructure than founder mixer.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Best fit for your goal</b>
+                  <p>High if you might build security, infra, compliance, or developer tooling. Lower if you want broad startup ideation.</p>
+                </div>
+                <div class="decision-note">
+                  <b>Choose this if</b>
+                  <p>You want to ask technical buyers what risk or manual review process they would pay to remove.</p>
+                </div>
+              </div>
+              <div class="source-row">
+                <a href="https://luma.com/ow1f82nb" target="_blank" rel="noopener noreferrer">Event page</a>
+                <a href="https://planetscale.com/" target="_blank" rel="noopener noreferrer">PlanetScale</a>
+                <a href="https://www.youtube.com/@LowLevelTV" target="_blank" rel="noopener noreferrer">Low Level</a>
+              </div>
             </div>
           </li>
         </ol>
