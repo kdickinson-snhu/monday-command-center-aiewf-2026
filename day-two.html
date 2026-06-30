@@ -220,6 +220,19 @@
         padding: 18px;
       }
 
+      .slot.past {
+        border-color: #d8d5ca;
+        background: #efede5;
+        filter: grayscale(0.85);
+        opacity: 0.48;
+      }
+
+      .slot.past .tag,
+      .slot.past .ask {
+        background: #e4e1d8;
+        color: #686860;
+      }
+
       .time {
         font-size: 18px;
         font-weight: 900;
@@ -460,6 +473,7 @@
         <a href="https://www.ai.engineer/worldsfair/schedule" target="_blank" rel="noopener noreferrer">Official full schedule</a>
         <a href="./">Day 1: Monday</a>
         <a href="day-two.html" aria-current="page">Day 2: Tuesday</a>
+        <a href="day-three.html">Day 3: Wednesday</a>
       </nav>
 
       <section class="hero">
@@ -485,10 +499,10 @@
       </section>
 
       <aside class="now-strip">
-        <span class="pill">Tuesday frame</span>
+        <span class="pill">12:42pm checkpoint</span>
         <div class="now-main">
-          <strong>Default route: Main Stage in the morning, then follow the business/software-factory thread.</strong>
-          <span>If a session sounds cool but not monetizable, it is probably Priority 2 or Priority 3.</span>
+          <strong>Past sessions are muted. Next live anchor: protect the 1:30pm onward route.</strong>
+          <span>Anything that started before 12:42pm stays visible for context, but it is no longer the action plan.</span>
         </div>
         <div class="share-note">Public-shareable Day Two file</div>
       </aside>
@@ -498,7 +512,7 @@
           <h2>Morning keynotes</h2>
           <p>Stay on Main Stage long enough to catch the market narrative and OpenAI/Hugging Face/software-factory signals.</p>
         </div>
-        <article class="slot">
+        <article class="slot past">
           <div>
             <div class="time">9:00-10:25am</div>
             <span class="room">Main Stage</span>
@@ -554,7 +568,7 @@
           <p>Priority 1 is the recommended path. Use Priority 2 or Priority 3 if the room is full or your energy/objective shifts.</p>
         </div>
         <div class="timeline">
-          <article class="slot">
+          <article class="slot past">
             <div>
               <div class="time">10:45am</div>
               <span class="room">Main Stage</span>
@@ -577,7 +591,7 @@
             </div>
           </article>
 
-          <article class="slot">
+          <article class="slot past">
             <div><div class="time">11:10am</div><span class="room">Main Stage</span></div>
             <div>
               <h3>Rise of the Software Factory</h3>
@@ -594,7 +608,7 @@
             </div>
           </article>
 
-          <article class="slot">
+          <article class="slot past">
             <div><div class="time">11:40am</div><span class="room">Room 2010 / Track 1</span></div>
             <div>
               <h3>Everyone Gets A Software Company</h3>
@@ -611,7 +625,7 @@
             </div>
           </article>
 
-          <article class="slot">
+          <article class="slot past">
             <div><div class="time">12:05pm</div><span class="room">Main Stage</span></div>
             <div>
               <h3>What we learned by analyzing 1M AI-generated PRs</h3>
@@ -628,7 +642,7 @@
             </div>
           </article>
 
-          <article class="slot">
+          <article class="slot past">
             <div><div class="time">12:30pm</div><span class="room">Main Stage</span></div>
             <div>
               <h3>Fireside Chat: Gergely Orosz x Simon Eskildsen</h3>
