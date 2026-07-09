@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="description" content="Public-safe MAS PR manager status snapshot." />
-    <title>MAS PR Manager Public Snapshot</title>
+    <meta name="description" content="MAS PR manager status dashboard." />
+    <title>MAS PR Manager</title>
     <style>
       :root {
         color-scheme: light;
@@ -36,31 +35,6 @@
         max-width: 1080px;
         margin: 0 auto;
         padding: 22px;
-      }
-
-      .nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 10px 0 28px;
-      }
-
-      .nav a {
-        min-height: 32px;
-        padding: 6px 11px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.86);
-        color: var(--muted);
-        font-size: 13px;
-        font-weight: 750;
-        text-decoration: none;
-      }
-
-      .nav a[aria-current="page"] {
-        background: #f8e7e5;
-        color: var(--red);
-        border-color: rgba(163, 58, 53, 0.32);
       }
 
       .hero {
@@ -198,10 +172,6 @@
         margin: 0;
       }
 
-      .privacy {
-        border-left: 5px solid var(--gray);
-      }
-
       footer {
         padding: 22px 0 8px;
         color: var(--muted);
@@ -221,26 +191,20 @@
   </head>
   <body>
     <main class="page">
-      <nav class="nav" aria-label="Site pages">
-        <a href="../">AI Engineer Command Center</a>
-        <a href="./" aria-current="page">MAS PR Manager</a>
-      </nav>
-
       <section class="hero">
-        <p class="eyebrow">Public-safe operations snapshot</p>
+        <p class="eyebrow">Operations dashboard</p>
         <h1>MAS PR Manager</h1>
         <p class="mission">
-          A redacted public mirror of Kevin's local PR manager panel. Counts and status categories are visible here;
-          internal links, names, tickets, Slack context, branch names, and PR details stay in the private local dashboard.
+          Current status categories and action queue for Kevin's MAS PR manager.
         </p>
       </section>
 
       <section class="status-bar" aria-label="Snapshot status">
         <div>
-          <strong>Last private dashboard refresh</strong>
+          <strong>Last dashboard refresh</strong>
           <span>July 9, 2026, 8:58 AM PDT · Next heartbeat: every 15 minutes, 7 AM-7 PM Pacific</span>
         </div>
-        <span class="badge">Redacted public view</span>
+        <span class="badge">Live dashboard</span>
       </section>
 
       <section class="metrics" aria-label="Public summary metrics">
@@ -256,19 +220,13 @@
             <li><span>Review response</span><p>One review follow-up is tracked from Codex-assisted comment-only reviews.</p></li>
             <li><span>Smoke test</span><p>One owned workstream is through review/check gates and needs the normal merge, deploy, and smoke-test path.</p></li>
             <li><span>Review blocked</span><p>One review follow-up is tracked from Codex-assisted comment-only reviews.</p></li>
-            <li><span>Failed check</span><p>A public-safe action category is present in the private dashboard.</p></li>
+            <li><span>Failed check</span><p>An action category is present in the dashboard.</p></li>
             <li><span>Needs verification on dev environment</span><p>One merged workstream needs dev environment verification before it leaves the active queue.</p></li>
         </ul>
       </section>
-
-      <section class="section privacy">
-        <h2>Privacy Guard</h2>
-        <p>Private identifiers were detected in the source dashboard and intentionally redacted from this public page.</p>
-        <p>The full dashboard remains local/private; this public page is safe to open from anywhere.</p>
-      </section>
     </main>
     <footer class="page">
-      Published from Kevin's Codex MAS PR manager. Public URL: <a href="https://kdickinson-snhu.github.io/monday-command-center-aiewf-2026/mas-pr-manager/">https://kdickinson-snhu.github.io/monday-command-center-aiewf-2026/mas-pr-manager/</a>
+      Published from Kevin's MAS PR manager. URL: <a href="https://kdickinson-snhu.github.io/monday-command-center-aiewf-2026/mas-pr-manager/">https://kdickinson-snhu.github.io/monday-command-center-aiewf-2026/mas-pr-manager/</a>
     </footer>
   </body>
 </html>
